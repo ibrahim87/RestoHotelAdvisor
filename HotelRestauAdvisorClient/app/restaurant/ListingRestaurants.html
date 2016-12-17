@@ -1,0 +1,68 @@
+
+<!-- Start Latest News -->
+<section id="mu-latest-news">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-latest-news-area">
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Latest News</span>
+                        <h2>FROM ALL RESTAURANT</h2>
+                        <i class="fa fa-spoon"></i>
+                        <span class="mu-title-bar"></span>
+                    </div>
+                    <div class="mu-latest-news-content">
+                        <div class="row">
+                            <div class="col-md-3" *ngFor="let item of restaurants">
+                                <article class="mu-news-single">
+                                    <h3>{{item.Name}}</h3>
+                                    <figure class="mu-news-img">
+                                        <a href="#"><img src="../../../Content/assets/img/news/1.jpg" alt="img"></a>
+                                    </figure>
+                                    <div class="mu-news-single-content">
+                                        <ul class="mu-meta-nav">
+                                            <li>By Admin</li>
+                                            <li>{{item.DatePublication}}</li>
+                                        </ul>
+                                        <p>{{item.description}}</p>
+                                        <div class="mu-news-single-bottom">
+                                            <a [routerLink]="['/DetailRestaurant',item.Id]" class="mu-readmore-btn">Read More</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Latest News -->
+
+
+
+
+
+<!--<div class="col-md-12 col-md-12">
+    <div class="col-md-8 col-md-offset-1 col-lg-9 col-lg-offset-0">
+        <div class="media col-lg-6" style="padding:0 0 0 0;margin-top: 0px;" *ngFor="let item of restaurants">
+            <div class="media-left">
+                <a href="/DetailRestaurant/{{item.Id}}">
+                    <img class="media-object thumbnail" src="http://placehold.it/150x150">
+                </a>
+            </div>
+            <div class="media-body" style="padding:10px 10px 10px 10px;">
+                <h4 class="media-heading">{{item.Nom}} </h4>
+                <h6>{{item.Ville}} </h6>
+                <div class="text text-danger" style="margin-bottom:10px;margin-top:10px;">
+                    <div class="text-left"><strong>Site:</strong> {{item.Site}} TND <a
+                            [routerLink]="['/DetailRestaurant',item.Id]" class="pull-right">Details</a></div>
+                </div>
+                <div class="input-group col-lg-6 col-lg-offset-3">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+

@@ -1,0 +1,169 @@
+<section id="mu-ceerHotel">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area">
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Make A</span>
+                        <h2>Creation a new Restaurant</h2>
+                        <i class="fa fa-spoon"></i>
+                        <span class="mu-title-bar"></span>
+                    </div>
+                    <form name="formDemo" style="margin-top:40px;" [formGroup]="form" novalidate
+                          (ngSubmit)="save(form.value, form.valid)">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- Name Restaurant-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Name.valid, 'has-success': form.controls.Name.valid}">
+                                        <label class="control-label" for="name">Restaurant Name</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                               formControlName="Name">
+                                        <div *ngIf="form.controls.Name.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Name.errors.minlength && form.controls.Name.touched"> Le Nom doit être au minumum 2 caractéres </span>
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Name.errors.required && form.controls.Name.touched"> Le Nom du l'restaurant est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Tel.valid, 'has-success': form.controls.Tel.valid}">
+                                        <label class="control-label" for="tel"> Restaurant Tel</label>
+                                        <input type="text" class="form-control" id="tel" name="tel"
+                                               formControlName="Tel">
+                                        <div *ngIf="form.controls.Tel.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Tel.errors.minlength && form.controls.Tel.touched"> Le téléphone doit être 8 chiffres caractéres </span>
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Tel.errors.required && form.controls.Tel.touched"> Le téléphone est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Email.valid, 'has-success': form.controls.Email.valid}">
+                                        <label class="control-label" for="email">Adresse e-mail</label>
+                                        <input type="text" class="form-control" id="email" name="email"
+                                               formControlName="Email">
+                                        <div *ngIf="form.controls.Email.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Email.errors.pattern && form.controls.Email.touched"> L'email doit être sous la forme xxxx@xxxx.xx </span>
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Email.errors.required && form.controls.Email.touched"> L'email est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Address Restaurant-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Adresse.valid, 'has-success': form.controls.Adresse.valid}">
+                                        <label class="control-label" for="name">Restaurant Adresse</label>
+                                        <input type="text" class="form-control" id="adress" name="adress"
+                                               formControlName="Adresse">
+                                        <div *ngIf="form.controls.Adresse.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Adresse.errors.required && form.controls.Adresse.touched"> L'adresse est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Categorie Restaurant-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.CategorieRestaurant.valid, 'has-success': form.controls.CategorieRestaurant.valid}">
+                                        <label class="control-label" for="name">Restaurant Categorie Restaurant</label>
+
+
+                                        <select class="form-control">
+                                            <option value="0">How Many?</option>
+                                            <option value="1 Person">restaurant class</option>
+                                            <option value="2 People">2 People</option>
+                                            <option value="3 People">3 People</option>
+                                        </select>
+
+                                        <!--<input type="text" class="form-control" id="categorieRestaurant"
+                                               name="categorieRestaurant" formControlName="CategorieRestaurant">
+                                        <div *ngIf="form.controls.CategorieRestaurant.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.CategorieRestaurant.errors.required && form.controls.CategorieRestaurant.touched"> Le prénom est obligatoire </span>
+                                        </div>-->
+
+
+                                    </div>
+                                </div>
+
+                                <!-- Ville Restaurant-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Ville.valid, 'has-success': form.controls.Ville.valid}">
+                                        <label class="control-label" for="ville">Restaurant ville</label>
+                                        <input type="text" class="form-control" id="ville" name="ville"
+                                               formControlName="Ville">
+                                        <div *ngIf="form.controls.Ville.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Ville.errors.minlength && form.controls.Ville.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Ville.errors.required && form.controls.Ville.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Classification Restaurant-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Classification.valid, 'has-success': form.controls.Classification.valid}">
+                                        <label class="control-label" for="classification">Restaurant
+                                            Classification</label>
+                                        <input type="text" class="form-control" id="classification"
+                                               name="classification" formControlName="Classification">
+                                        <div *ngIf="form.controls.Classification.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Classification.errors.minlength && form.controls.Classification.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.Classification.errors.required && form.controls.Classification.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- description Restaurant-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.description.valid, 'has-success': form.controls.description.valid}">
+                                        <label class="control-label" for="name">Restaurant description</label>
+                                        <input type="text" class="form-control" id="description" name="description"
+                                               formControlName="description">
+                                        <div *ngIf="form.controls.description.invalid">
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.description.errors.minlength && form.controls.description.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                            <span class="text-danger"
+                                                  *ngIf="form.controls.description.errors.required && form.controls.description.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Actions-->
+                                <div>
+                                    <div class='text-center'>
+                                        <div class="btn-group">
+                                            <button type="submit" class="mu-readmore-btn">validate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

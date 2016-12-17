@@ -1,0 +1,40 @@
+<section id="mu-ceerHotel">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area">
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Login</span>
+                        <h2>For discover more Our website</h2>
+                        <i class="fa fa-spoon"></i>
+                        <span class="mu-title-bar"></span>
+                    </div>
+                    <section id="primary" class="content-full-width">
+
+                        <div class="full-width-section parallax full-section-bg">
+                            <div class="container">
+                                <div class="dt-sc-clear"></div>
+                                <div class="form-wrapper login">
+                                    <form id="loginform" name="frmLogin" #form="ngForm" (ngSubmit)="onSubmit(form)"><p
+                                            [ngClass]="{'has-error': !form.valid, 'has-success': form.valid}"><input
+                                            placeholder="Username or Email" id="user_name" name="user"
+                                            autocomplete="off" type="text"
+                                            ngModel required>
+                                    </p>
+                                        <p [ngClass]="{'has-error': !form.valid, 'has-success': form.valid}">
+                                            <input placeholder="Password"
+                                                   id="user_pwd"
+                                                   name="password"
+                                                   type="password" ngModel
+                                                   required></p> <input
+                                                class="button" value="Log-In" type="submit"></form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

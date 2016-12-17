@@ -1,0 +1,57 @@
+<!-- Start Latest News -->
+<section id="mu-latest-news">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-latest-news-area">
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Latest News</span>
+                        <h2>FROM ALL Hotels</h2>
+                        <i class="fa fa-spoon"></i>
+                        <span class="mu-title-bar"></span>
+                    </div>
+                    <section id="mu-subscription">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mu-subscription-area">
+                                        <form class="mu-subscription-form">
+                                            <input type="text" placeholder="Type to search Hotel">
+                                            <button class="mu-readmore-btn" type="Submit">SUBSCRIBE</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="mu-latest-news-content">
+                        <div class="row">
+                            <div class="col-md-3" *ngFor="let item of hotels">
+                                <article class="mu-news-single">
+                                    <h3>{{item.Name}}</h3>
+                                    <figure class="mu-news-img">
+                                        <a href="#"><img src="../../../Content/assets/img/news/1.jpg" alt="img"></a>
+                                    </figure>
+                                    <div class="mu-news-single-content">
+                                        <ul class="mu-meta-nav">
+                                            <li>By Admin</li>
+                                            <li>{{item.DatePublication}}</li>
+                                        </ul>
+                                        <p>{{item.description}}</p>
+                                        <div class="mu-news-single-bottom">
+                                            <a [routerLink]="['/DetailHotels',item.Id]" class="mu-readmore-btn">Read More</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Latest News -->
+
+
+

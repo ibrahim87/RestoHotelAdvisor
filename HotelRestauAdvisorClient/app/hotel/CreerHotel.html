@@ -1,0 +1,265 @@
+<section id="mu-ceerHotel">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area">
+                    <div class="mu-title">
+                        <span class="mu-subtitle">Make A</span>
+                        <h2>Creation a new Hotel</h2>
+                        <i class="fa fa-spoon"></i>
+                        <span class="mu-title-bar"></span>
+                    </div>
+                    <form name="formDemo" style="margin-top:40px;" [formGroup]="form" novalidate
+                          (ngSubmit)="save(form.value, form.valid)">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- Name Hotel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Name.valid, 'has-success': form.controls.Name.valid}">
+                                        <label class="control-label" for="name">Hotel Name</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                               formControlName="Name">
+                                        <div *ngIf="form.controls.Name.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Name.errors.minlength && form.controls.Name.touched"> Le Nom doit être au minumum 2 caractéres </span>
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Name.errors.required && form.controls.Name.touched"> Le Nom du l'hotel est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Tel.valid, 'has-success': form.controls.Tel.valid}">
+                                        <label class="control-label" for="tel"> Hotel Tel</label>
+                                        <input type="text" class="form-control" id="tel" name="tel"
+                                               formControlName="Tel">
+                                        <div *ngIf="form.controls.Tel.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Tel.errors.minlength && form.controls.Tel.touched"> Le téléphone doit être 8 chiffres caractéres </span>
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Tel.errors.required && form.controls.Tel.touched"> Le téléphone est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Email.valid, 'has-success': form.controls.Email.valid}">
+                                        <label class="control-label" for="email">Adresse e-mail</label>
+                                        <input type="text" class="form-control" id="email" name="email"
+                                               formControlName="Email">
+                                        <div *ngIf="form.controls.Email.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Email.errors.pattern && form.controls.Email.touched"> L'email doit être sous la forme xxxx@xxxx.xx </span>
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Email.errors.required && form.controls.Email.touched"> L'email est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Address Hotel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Adresse.valid, 'has-success': form.controls.Adresse.valid}">
+                                        <label class="control-label" for="name">Hotel Adresse</label>
+                                        <input type="text" class="form-control" id="adress" name="adress"
+                                               formControlName="Adresse">
+                                        <div *ngIf="form.controls.Adresse.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Adresse.errors.required && form.controls.Adresse.touched"> L'adresse est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Categorie Hotel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.CategorieHotel.valid, 'has-success': form.controls.CategorieHotel.valid}">
+                                        <label class="control-label" for="name">Hotel CategorieHotel</label>
+                                        <input type="text" class="form-control" id="categorieHotel"
+                                               name="categorieHotel"
+                                               formControlName="CategorieHotel">
+                                        <div *ngIf="form.controls.CategorieHotel.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.CategorieHotel.errors.required && form.controls.CategorieHotel.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Ville Hotel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Ville.valid, 'has-success': form.controls.Ville.valid}">
+                                        <label class="control-label" for="ville">Hotel ville</label>
+                                        <input type="text" class="form-control" id="ville" name="ville"
+                                               formControlName="Ville">
+                                        <div *ngIf="form.controls.Ville.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Ville.errors.minlength && form.controls.Ville.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Ville.errors.required && form.controls.Ville.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Classification Hotel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Classification.valid, 'has-success': form.controls.Classification.valid}">
+                                        <label class="control-label" for="classification">Hotel Classification</label>
+                                        <input type="text" class="form-control" id="classification"
+                                               name="classification"
+                                               formControlName="Classification">
+                                        <div *ngIf="form.controls.Classification.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Classification.errors.minlength && form.controls.Classification.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Classification.errors.required && form.controls.Classification.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- description Hotel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.description.valid, 'has-success': form.controls.description.valid}">
+                                        <label class="control-label" for="name">Hotel description</label>
+                                        <input type="text" class="form-control" id="description" name="description"
+                                               formControlName="description">
+                                        <div *ngIf="form.controls.description.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.description.errors.minlength && form.controls.description.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.description.errors.required && form.controls.description.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tarif Hotel-->
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group col-lg-8 col-lg-offset-2"
+                                         [ngClass]="{'has-error': !form.controls.Tarif.valid, 'has-success': form.controls.Tarif.valid}">
+                                        <label class="control-label" for="name">Hotel Tarif</label>
+                                        <input type="text" class="form-control" id="tarif" name="tarif"
+                                               formControlName="Tarif">
+                                        <div *ngIf="form.controls.Tarif.invalid">
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Tarif.errors.minlength && form.controls.Tarif.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                        <span class="text-danger"
+                                              *ngIf="form.controls.Tarif.errors.required && form.controls.Tarif.touched"> Le prénom est obligatoire </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!---------------------Image Hotel---------------------->
+
+
+                                <!-- <div class="row">
+                                     <div class="col-md-4">
+                                         <form>
+                                             <div class="form-group">
+                                                 <input type="file" class="form-control" name="single" ng2FileSelect [uploader]="uploader" />
+                                             </div>
+                                         </form>
+                                     </div>
+                                     <div class="col-md-8">
+                                         <h3>File Upload with Angular 2 and Node</h3>
+                                         Queue length: {{ uploader?.queue?.length }}
+
+                                         <table class="table">
+                                             <thead>
+                                             <tr>
+                                                 <th width="50%">Name</th>
+                                                 <th>Size</th>
+                                                 <th>Progress</th>
+                                                 <th>Status</th>
+                                                 <th>Actions</th>
+                                             </tr>
+                                             </thead>
+                                             <tbody>
+                                             <tr *ngFor="let item of uploader.queue">
+                                                 <td><strong>{{ item.file.name }}</strong></td>
+                                                 <td nowrap>{{ item.file.size/1024/1024 | number:'.2' }} MB</td>
+                                                 <td>
+                                                     <div class="progress" style="margin-bottom: 0;">
+                                                         <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+                                                     </div>
+                                                 </td>
+                                                 <td class="text-center">
+                                                     <span *ngIf="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                                                     <span *ngIf="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                                                     <span *ngIf="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                                                 </td>
+                                                 <td nowrap>
+                                                     <button type="button" class="btn btn-success btn-xs"
+                                                             (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">
+                                                         <span class="glyphicon glyphicon-upload"></span> Upload
+                                                     </button>
+                                                     <button type="button" class="btn btn-warning btn-xs"
+                                                             (click)="item.cancel()" [disabled]="!item.isUploading">
+                                                         <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                                                     </button>
+                                                     <button type="button" class="btn btn-danger btn-xs"
+                                                             (click)="item.remove()">
+                                                         <span class="glyphicon glyphicon-trash"></span> Remove
+                                                     </button>
+                                                 </td>
+                                             </tr>
+                                             </tbody>
+                                         </table>
+
+                                         <div>
+                                             <div>
+                                                 Queue progress:
+                                                 <div class="progress" style="">
+                                                     <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
+                                                 </div>
+                                             </div>
+                                             <button type="button" class="btn btn-success btn-s"
+                                                     (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+                                                 <span class="glyphicon glyphicon-upload"></span> Upload all
+                                             </button>
+                                             <button type="button" class="btn btn-warning btn-s"
+                                                     (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading">
+                                                 <span class="glyphicon glyphicon-ban-circle"></span> Cancel all
+                                             </button>
+                                             <button type="button" class="btn btn-danger btn-s"
+                                                     (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
+                                                 <span class="glyphicon glyphicon-trash"></span> Remove all
+                                             </button>
+                                         </div>
+                                     </div>
+                                 </div>-->
+
+
+                                <!-------------------------------------->
+
+                                <!--Actions-->
+                                <div>
+                                    <div class='text-center'>
+                                        <div class="btn-group">
+                                            <button type="submit" class="mu-readmore-btn">validate</button>
+
+                                            <!--<button type="button" id="btnAnnuler" name="btnAnnuler"
+                                                    class="btn btn-info center-block">
+                                                Annuler
+                                            </button>-->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+</section>
