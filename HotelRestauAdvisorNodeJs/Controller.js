@@ -142,3 +142,11 @@ exports.FindALLCategories = function (req, res) {
 };
 
 
+/***************Reservation Hotel ********************/
+
+exports.CreerReservationHotel = function (req, res) {
+    console.log('ReservationHotel', req.body);
+    models.ReservationHotel(req.body).save();
+    res.json(req.body);
+};
+

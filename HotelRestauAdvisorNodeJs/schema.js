@@ -5,7 +5,8 @@ exports.schemaUtilisateur = new mongoose.Schema({
     Nom: {type: String, uppercase: true},
     Prenom: String,
     Email: {type: String, index: true, unique: true, required: true},
-    Password: {type: String, required: true}
+    Password: {type: String, required: true},
+    Role:String,
 });
 
 exports.schemaHotel = new mongoose.Schema({
@@ -34,6 +35,7 @@ exports.schemaRestaurant = new mongoose.Schema({
     Classification: {type: String},
     description: {type: String},
     DatePublication: {type: Date},
+    Image: {type: String},
 });
 
 exports.schemaImageHotel = new mongoose.Schema({
@@ -63,3 +65,13 @@ exports.schemaVille = new mongoose.Schema({
     Name: {type: String},
 });
 
+exports.schemaReservationHotel = new mongoose.Schema({
+    IdUtilisateur:String,
+    IdHotel:String,
+    NbrePersonne:Number,
+    NbreChambre:Number,
+    DateArrive:Date,
+    DateDepart:Date,
+    DateCreation:Date,
+    TotalTarif:String
+});

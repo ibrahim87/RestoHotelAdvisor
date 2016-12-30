@@ -8,4 +8,6 @@ exports.ImageRestaurant = mongoose.model('ImageRestaurant', schemas.schemaImageR
 exports.CategorieHotel = mongoose.model('CategorieHotel', schemas.schemaCategorieHotel);
 exports.CategorieRestaurant = mongoose.model('CategorieRestaurant', schemas.schemaCategorieRestaurant);
 exports.Ville = mongoose.model('Ville', schemas.schemaVille);
+exports.ReservationHotel = mongoose.model('ReservationHotel', schemas.schemaReservationHotel);
+
 

@@ -37,6 +37,9 @@ app.post('/Restaurant/Creer',contoller.CreerRestaurant);
 app.get('/Restaurants', contoller.getAllRestaurant);
 app.get('/Restaurant/:Id',contoller.getRestaurantById);
 
+/*-----------------Reservation----------------------------*/
+app.post('/ReservationHotel/Creer', contoller.CreerReservationHotel);
+
 /*
 /!*------------------------Upload----------------------------------*!/
 
