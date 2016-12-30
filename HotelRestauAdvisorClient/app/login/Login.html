@@ -16,19 +16,20 @@
                                 <div class="dt-sc-clear"></div>
                                 <div class="form-wrapper login">
                                     <form id="loginform" name="frmLogin" #form="ngForm" (ngSubmit)="onSubmit(form)"><p
-                                            [ngClass]="{'has-error': !form.valid, 'has-success': form.valid}"><input
-                                            placeholder="Username or Email" id="user_name" name="user"
+                                            [ngClass]="{'has-error': !form.valid, 'has-success': form.valid}">
+                                        <input placeholder="Username or Email" id="user_name" name="user"
                                             autocomplete="off" type="text"
                                             ngModel required>
                                     </p>
                                         <p [ngClass]="{'has-error': !form.valid, 'has-success': form.valid}">
-                                            <input placeholder="Password"
-                                                   id="user_pwd"
-                                                   name="password"
+                                            <input placeholder="Password" id="user_pwd" name="password"
                                                    type="password" ngModel
-                                                   required></p> <input
-                                                class="button" value="Log-In" type="submit"></form>
+                                                   required></p>
+                                        <input class="btn btn-primary btn-lg btn-block" value="Log-In" type="submit"></form>
                                 </div>
+                                <article class="mu-news-single create-account">
+                                    <h4><a [routerLink]="['CreerUtilisateur']">create new account</a></h4>
+                                </article>
                             </div>
                         </div>
                     </section>

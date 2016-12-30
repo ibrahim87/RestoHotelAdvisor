@@ -1,3 +1,4 @@
+/*
 import {Component, Inject} from '@angular/core';
 import {FileUploadService} from './fileUploadService';
 @Component({
@@ -49,3 +50,4 @@ export class HomeComponent {
         // this.saveUploadedTemplatesData(result['images']);
     }
 }
+*/

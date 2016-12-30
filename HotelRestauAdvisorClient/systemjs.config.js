@@ -10,8 +10,8 @@
         'rxjs': 'npm:rxjs',
         /** Path for ng2-file-upload */
         'ng2-file-upload' : 'npm:ng2-file-upload',
-        /** Path for ng2-file-upload */
-        'ng2-filter-pipe': 'node_modules/ng2-filter-pipe'
+        'ng2-filter-pipe': 'node_modules/ng2-filter-pipe',
+        'ng2-datetime-picker':'node_modules/ng2-datetime-picker/dist'
     };
     var packages = {
         'app': {main: 'main.js', defaultExtension: 'js'},
@@ -22,7 +22,9 @@
             main: './ng2-file-upload.js',
             defaultExtension: 'js'
         },
-        'ng2-filter-pipe': { main: 'dist/index.js' }
+        'ng2-filter-pipe': { main: 'dist/index.js' },
+
+        'ng2-datetime-picker':{ main: 'ng2-datetime-picker.umd.js', defaultExtension: 'js'},
 
         /** Configuration for ng2-file-upload */
     };

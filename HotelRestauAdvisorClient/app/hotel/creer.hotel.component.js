@@ -5,13 +5,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require('@angular/core');
 var forms_1 = require("@angular/forms");
-var router_1 = require("@angular/router");
-var hotel_service_1 = require("./hotel.service");
 var ng2_file_upload_1 = require('ng2-file-upload');
 var CreerHotelComponent = (function () {
     function CreerHotelComponent(fb, hotelService, router) {
@@ -20,7 +15,7 @@ var CreerHotelComponent = (function () {
         this.uploader = new ng2_file_upload_1.FileUploader({ url: 'http://localhost:8080/upload' });
         this.form = fb.group({
             "Name": ["", forms_1.Validators.compose([forms_1.Validators.minLength(2), forms_1.Validators.required, forms_1.Validators.maxLength(50)])],
-            "Tel": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.minLength(2), forms_1.Validators.maxLength(50)])],
+            "Tel": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern("^(0|[1-9][0-9]*)$")])],
             "Email": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])],
             "Adresse": ["", forms_1.Validators.required],
             "CategorieHotel": ["", forms_1.Validators.required],
@@ -36,8 +31,7 @@ var CreerHotelComponent = (function () {
         }
     };
     CreerHotelComponent = __decorate([
-        core_1.Component({ selector: 'hotel', templateUrl: "../app/hotel/CreerHotel.html" }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder, hotel_service_1.HotelService, router_1.Router])
+        core_1.Component({ selector: 'hotel', templateUrl: "../app/hotel/CreerHotel.html" })
     ], CreerHotelComponent);
     return CreerHotelComponent;
 }());

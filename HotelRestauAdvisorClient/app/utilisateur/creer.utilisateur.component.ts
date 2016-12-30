@@ -14,7 +14,8 @@ export class CreerUtilisateurComponent {
             "Nom": ["", Validators.compose([Validators.minLength(2), Validators.required, Validators.maxLength(50)])],
             "Prenom": ["", Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(50)])],
             "Email": ["", Validators.compose([Validators.required, Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])],
-            "Password": ["", Validators.required]
+            "Password": ["", Validators.required],
+            "Role":["client"],
         });
     }
 

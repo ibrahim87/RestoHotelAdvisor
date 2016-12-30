@@ -3,9 +3,7 @@ var router_1 = require('@angular/router');
 var accueil_component_1 = require('./accueil.component');
 var besoin_aide_component_1 = require('./besoin.aide.component');
 var contact_component_1 = require('./contact.component');
-var detail_component_1 = require('./detail.component');
 var creer_compte_component_1 = require('./creer.compte.component');
-var livres_component_1 = require('./livres.component');
 var creer_utilisateur_component_1 = require("./utilisateur/creer.utilisateur.component");
 var login_component_1 = require("./login/login.component");
 var creer_hotel_component_1 = require("./hotel/creer.hotel.component");
@@ -22,12 +20,10 @@ var appRoutes = [
     { path: 'Accueil', component: accueil_component_1.AccueilComponent },
     { path: 'BesoinAide', component: besoin_aide_component_1.BesoinAideComponent },
     { path: 'Contact', component: contact_component_1.ContactComponent },
-    { path: 'Detail/:Id', component: detail_component_1.DetailComponent },
     { path: 'CreerCompte', component: creer_compte_component_1.CreerCompteComponent },
     { path: 'CreerUtilisateur', component: creer_utilisateur_component_1.CreerUtilisateurComponent },
+    { path: 'Login/CreerUtilisateur', component: creer_utilisateur_component_1.CreerUtilisateurComponent },
     { path: 'Login', component: login_component_1.LoginComponent },
-    { path: 'LesLivres', component: livres_component_1.LivresComponent },
-    { path: 'LesLivres/:Category', component: livres_component_1.LivresComponent },
     { path: 'CreerHotel', component: creer_hotel_component_1.CreerHotelComponent },
     { path: 'Hotels', component: listing_hotels_component_1.ListingHotelsComponent },
     { path: 'DetailHotels/:Id', component: detail_hotel_component_1.DetailHotelComponent, canActivate: [logged_guard_1.LoggedInGuard] },

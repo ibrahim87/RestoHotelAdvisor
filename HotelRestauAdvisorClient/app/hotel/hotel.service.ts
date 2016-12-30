@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {Hotel} from "./Hotel";
+import {ReservationHotel} from "./ReservationHotel";
 
 @Injectable()
 export class HotelService {
@@ -46,5 +47,21 @@ export class HotelService {
         let headers = new Headers();
         headers.append('Accept', 'application/json');
         return headers;
+    }
+
+
+    CreerNouveauReservationHotel(reservationHotel:ReservationHotel) {
+
+        console.log("aa");
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({headers: headers});
+        this.http.post(this.UrlWebApi + '/ReservationHotel/Creer', reservationHotel, options) .map((res:Response) => {
+            res.json();
+            console.log('res', res);
+        }) .subscribe(p => {
+            console.log('reservation a été enregistré');
+        }, err => {
+            console.log('Erreur de sauvegarde', err);
+        });
     }
 }

@@ -9,44 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var panier_service_1 = require('./panier.service');
-var compte_service_1 = require('./compte.service');
+var utilisateur_service_1 = require("./utilisateur/utilisateur.service");
 var AppComponent = (function () {
-    function AppComponent(panierService, compteService) {
+    function AppComponent(utilisateurService) {
         var _this = this;
-        this.panierService = panierService;
-        this.compteService = compteService;
-        this.PanierLivre = [];
+        this.utilisateurService = utilisateurService;
         this.LoggedIn = false;
-        this.PanierLivre = this.panierService.Livres;
-        this.compteService.Compte.subscribe(function (p) { return _this.compte = p; });
-        this.compteService.loggedIn.subscribe(function (p) { return _this.LoggedIn = p; });
+        this.utilisateurService.Utilisateur.subscribe(function (p) { return _this.utilisateur = p; });
+        this.utilisateurService.loggedIn.subscribe(function (p) { return _this.LoggedIn = p; });
     }
-    AppComponent.prototype.CalculerNombreTotalLivre = function () {
-        var numbre = 0;
-        for (var _i = 0, _a = this.PanierLivre; _i < _a.length; _i++) {
-            var item = _a[_i];
-            numbre = numbre + +item.Quantite;
-        }
-        return numbre;
-    };
-    AppComponent.prototype.CalculerMontantTotal = function () {
-        var numbre = 0;
-        for (var _i = 0, _a = this.PanierLivre; _i < _a.length; _i++) {
-            var item = _a[_i];
-            numbre = numbre + (+item.Quantite * +item.Prix);
-        }
-        return numbre;
-    };
-    AppComponent.prototype.SupprimerLivre = function (livre) {
-        this.panierService.SupprimerLivre(livre);
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'je-bouquine',
             templateUrl: "../app/html/index.html",
             styleUrls: ["../Content/style.css", "../Content/assets/css/slick.css"] }), 
-        __metadata('design:paramtypes', [panier_service_1.PanierService, compte_service_1.CompteService])
+        __metadata('design:paramtypes', [utilisateur_service_1.UtilisateurService])
     ], AppComponent);
     return AppComponent;
 }());

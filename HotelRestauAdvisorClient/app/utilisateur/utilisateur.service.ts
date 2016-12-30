@@ -9,10 +9,12 @@ import {BehaviorSubject} from 'rxjs/Rx';
 
 @Injectable()
 export class UtilisateurService {
+
     private UrlWebApi = 'http://localhost:8080';
     private http:Http;
     isLoggedIn:boolean = false;
     _utilisateur:Utilisateur = new Utilisateur();
+
     public loggedIn:Subject<boolean> = new BehaviorSubject<boolean>(this.isLoggedIn);
     public Utilisateur:Subject<Utilisateur> = new BehaviorSubject<Utilisateur>(this._utilisateur);
 

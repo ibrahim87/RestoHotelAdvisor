@@ -129,8 +129,7 @@
                                     <div class="form-group col-lg-8 col-lg-offset-2"
                                          [ngClass]="{'has-error': !form.controls.description.valid, 'has-success': form.controls.description.valid}">
                                         <label class="control-label" for="name">Hotel description</label>
-                                        <input type="text" class="form-control" id="description" name="description"
-                                               formControlName="description">
+                                        <input type="text" class="form-control" id="description" name="description" formControlName="description">
                                         <div *ngIf="form.controls.description.invalid">
                                         <span class="text-danger"
                                               *ngIf="form.controls.description.errors.minlength && form.controls.description.touched"> Le prénom doit être au minumum 2 caractéres </span>

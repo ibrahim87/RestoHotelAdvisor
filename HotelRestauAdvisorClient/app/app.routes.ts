@@ -3,9 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {AccueilComponent} from './accueil.component';
 import {BesoinAideComponent} from './besoin.aide.component';
 import {ContactComponent} from './contact.component';
-import {DetailComponent} from './detail.component';
 import {CreerCompteComponent} from './creer.compte.component';
-import {LivresComponent} from './livres.component';
 import {CreerUtilisateurComponent} from "./utilisateur/creer.utilisateur.component";
 import {LoginComponent} from "./login/login.component";
 import {CreerHotelComponent} from  "./hotel/creer.hotel.component";
@@ -24,12 +22,10 @@ const appRoutes:Routes = [
     {path: 'Accueil', component: AccueilComponent},
     {path: 'BesoinAide', component: BesoinAideComponent},
     {path: 'Contact', component: ContactComponent},
-    {path: 'Detail/:Id', component: DetailComponent},
     {path: 'CreerCompte', component: CreerCompteComponent},
     {path: 'CreerUtilisateur', component: CreerUtilisateurComponent},
+    {path: 'Login/CreerUtilisateur', component: CreerUtilisateurComponent},
     {path: 'Login', component: LoginComponent},
-    {path: 'LesLivres', component: LivresComponent},
-    {path: 'LesLivres/:Category', component: LivresComponent},
     {path: 'CreerHotel', component: CreerHotelComponent},
     {path: 'Hotels', component: ListingHotelsComponent},
     {path: 'DetailHotels/:Id', component: DetailHotelComponent,canActivate: [LoggedInGuard]},

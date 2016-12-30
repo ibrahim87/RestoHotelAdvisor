@@ -8,6 +8,7 @@ export class Restaurant {
     public Classification:string;
     public description:string;
     public DatePublication:Date;
+    public Image:string;
     constructor() {
     }
 }

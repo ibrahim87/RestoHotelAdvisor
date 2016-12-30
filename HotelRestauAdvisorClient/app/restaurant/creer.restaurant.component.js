@@ -18,7 +18,7 @@ var CreerRestaurantComponent = (function () {
         this.router = router;
         this.form = fb.group({
             "Name": ["", forms_1.Validators.compose([forms_1.Validators.minLength(2), forms_1.Validators.required, forms_1.Validators.maxLength(50)])],
-            "Tel": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.minLength(2), forms_1.Validators.maxLength(50)])],
+            "Tel": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern("^(0|[1-9][0-9]*)$")])],
             "Email": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])],
             "Adresse": ["", forms_1.Validators.required],
             "CategorieRestaurant": [""],

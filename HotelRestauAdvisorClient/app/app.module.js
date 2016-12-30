@@ -15,14 +15,10 @@ var app_component_1 = require('./app.component');
 var accueil_component_1 = require('./accueil.component');
 var besoin_aide_component_1 = require('./besoin.aide.component');
 var contact_component_1 = require('./contact.component');
-var detail_component_1 = require('./detail.component');
 var creer_compte_component_1 = require('./creer.compte.component');
-var livres_component_1 = require('./livres.component');
 var adresse_component_1 = require('./adresse.component');
 // import {LoginComponent} from './login.component';
 var http_1 = require('@angular/http');
-var livres_service_1 = require('./livres.service');
-var panier_service_1 = require('./panier.service');
 var forms_1 = require("@angular/forms");
 var compte_service_1 = require("./compte.service");
 var creer_utilisateur_component_1 = require("./utilisateur/creer.utilisateur.component");
@@ -41,21 +37,20 @@ var gallery_component_1 = require("./gallery.component");
 var common_1 = require('@angular/common');
 var logged_guard_1 = require('./logged.guard');
 var ng2_filter_pipe_1 = require('ng2-filter-pipe');
+var ng2_datetime_picker_1 = require('ng2-datetime-picker');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routes_1.routing, http_1.HttpModule, forms_1.ReactiveFormsModule, forms_1.FormsModule, ng2_filter_pipe_1.Ng2FilterPipeModule],
+            imports: [platform_browser_1.BrowserModule, app_routes_1.routing, http_1.HttpModule, forms_1.ReactiveFormsModule, forms_1.FormsModule, ng2_filter_pipe_1.Ng2FilterPipeModule, ng2_datetime_picker_1.Ng2DatetimePickerModule],
             declarations: [
                 app_component_1.AppComponent,
                 accueil_component_1.AccueilComponent,
                 besoin_aide_component_1.BesoinAideComponent,
                 contact_component_1.ContactComponent,
-                detail_component_1.DetailComponent,
                 creer_compte_component_1.CreerCompteComponent,
                 creer_utilisateur_component_1.CreerUtilisateurComponent,
-                livres_component_1.LivresComponent,
                 adresse_component_1.AdresseComponent,
                 login_component_1.LoginComponent,
                 creer_hotel_component_1.CreerHotelComponent,
@@ -69,8 +64,6 @@ var AppModule = (function () {
             ],
             bootstrap: [app_component_1.AppComponent],
             providers: [
-                livres_service_1.LivresService,
-                panier_service_1.PanierService,
                 compte_service_1.CompteService,
                 utilisateur_service_1.UtilisateurService,
                 hotel_service_1.HotelService,

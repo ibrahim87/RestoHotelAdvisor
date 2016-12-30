@@ -5,15 +5,11 @@ import {AppComponent} from './app.component';
 import {AccueilComponent} from './accueil.component';
 import {BesoinAideComponent} from './besoin.aide.component';
 import {ContactComponent} from './contact.component';
-import {DetailComponent} from './detail.component';
 import {CreerCompteComponent} from './creer.compte.component';
-import {LivresComponent} from './livres.component';
 import {AdresseComponent} from './adresse.component';
 // import {LoginComponent} from './login.component';
 
 import { HttpModule } from '@angular/http';
-import { LivresService } from './livres.service';
-import { PanierService } from './panier.service';
 import {FormsModule, ReactiveFormsModule}from "@angular/forms";
 import {CompteService} from "./compte.service";
 import {CreerUtilisateurComponent} from "./utilisateur/creer.utilisateur.component";
@@ -32,18 +28,17 @@ import {GalleryComponent} from "./gallery.component";
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { LoggedInGuard } from './logged.guard';
 import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
+import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
 
 @NgModule({
-    imports: [BrowserModule, routing ,HttpModule ,ReactiveFormsModule,FormsModule,Ng2FilterPipeModule],
+    imports: [BrowserModule, routing ,HttpModule ,ReactiveFormsModule,FormsModule,Ng2FilterPipeModule,Ng2DatetimePickerModule],
     declarations: [
         AppComponent,
          AccueilComponent,
          BesoinAideComponent,
         ContactComponent,
-         DetailComponent,
          CreerCompteComponent,
         CreerUtilisateurComponent,
-        LivresComponent,
          AdresseComponent,
         LoginComponent,
         CreerHotelComponent,
@@ -57,8 +52,6 @@ import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
     ],
     bootstrap: [AppComponent],
     providers: [
-        LivresService,
-         PanierService,
         CompteService,
         UtilisateurService,
         HotelService,

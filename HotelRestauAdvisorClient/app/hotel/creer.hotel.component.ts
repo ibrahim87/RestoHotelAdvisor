@@ -14,7 +14,7 @@ export class CreerHotelComponent {
     constructor(fb:FormBuilder, private hotelService:HotelService, private router:Router) {
         this.form = fb.group({
             "Name": ["", Validators.compose([Validators.minLength(2), Validators.required, Validators.maxLength(50)])],
-            "Tel": ["", Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(50)])],
+            "Tel": ["",Validators.compose([ Validators.required,Validators.pattern("^(0|[1-9][0-9]*)$")])],
             "Email": ["", Validators.compose([Validators.required, Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])],
             "Adresse": ["", Validators.required],
             "CategorieHotel": ["", Validators.required],

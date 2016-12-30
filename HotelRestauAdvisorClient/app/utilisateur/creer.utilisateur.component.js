@@ -20,7 +20,8 @@ var CreerUtilisateurComponent = (function () {
             "Nom": ["", forms_1.Validators.compose([forms_1.Validators.minLength(2), forms_1.Validators.required, forms_1.Validators.maxLength(50)])],
             "Prenom": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.minLength(2), forms_1.Validators.maxLength(50)])],
             "Email": ["", forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])],
-            "Password": ["", forms_1.Validators.required]
+            "Password": ["", forms_1.Validators.required],
+            "Role": ["client"],
         });
     }
     CreerUtilisateurComponent.prototype.save = function (model, isValid) {

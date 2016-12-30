@@ -86,8 +86,8 @@
                                         <select class="form-control">
                                             <option value="0">How Many?</option>
                                             <option value="1 Person">restaurant class</option>
-                                            <option value="2 People">2 People</option>
-                                            <option value="3 People">3 People</option>
+                                            <option value="2 People">restaurant class a</option>
+                                            <option value="3 People">restaurant class b</option>
                                         </select>
 
                                         <!--<input type="text" class="form-control" id="categorieRestaurant"
@@ -110,9 +110,9 @@
                                                formControlName="Ville">
                                         <div *ngIf="form.controls.Ville.invalid">
                                             <span class="text-danger"
-                                                  *ngIf="form.controls.Ville.errors.minlength && form.controls.Ville.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                                  *ngIf="form.controls.Ville.errors.minlength && form.controls.Ville.touched"> la ville doit être au minumum 2 caractéres </span>
                                             <span class="text-danger"
-                                                  *ngIf="form.controls.Ville.errors.required && form.controls.Ville.touched"> Le prénom est obligatoire </span>
+                                                  *ngIf="form.controls.Ville.errors.required && form.controls.Ville.touched"> la ville est obligatoire </span>
                                         </div>
                                     </div>
                                 </div>
@@ -127,9 +127,9 @@
                                                name="classification" formControlName="Classification">
                                         <div *ngIf="form.controls.Classification.invalid">
                                             <span class="text-danger"
-                                                  *ngIf="form.controls.Classification.errors.minlength && form.controls.Classification.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                                  *ngIf="form.controls.Classification.errors.minlength && form.controls.Classification.touched"> la classification doit être au minumum 2 caractéres </span>
                                             <span class="text-danger"
-                                                  *ngIf="form.controls.Classification.errors.required && form.controls.Classification.touched"> Le prénom est obligatoire </span>
+                                                  *ngIf="form.controls.Classification.errors.required && form.controls.Classification.touched"> la classification est obligatoire </span>
                                         </div>
                                     </div>
                                 </div>
@@ -143,9 +143,9 @@
                                                formControlName="description">
                                         <div *ngIf="form.controls.description.invalid">
                                             <span class="text-danger"
-                                                  *ngIf="form.controls.description.errors.minlength && form.controls.description.touched"> Le prénom doit être au minumum 2 caractéres </span>
+                                                  *ngIf="form.controls.description.errors.minlength && form.controls.description.touched"> La description doit être au minumum 2 caractéres </span>
                                             <span class="text-danger"
-                                                  *ngIf="form.controls.description.errors.required && form.controls.description.touched"> Le prénom est obligatoire </span>
+                                                  *ngIf="form.controls.description.errors.required && form.controls.description.touched"> la description est obligatoire </span>
                                         </div>
                                     </div>
                                 </div>

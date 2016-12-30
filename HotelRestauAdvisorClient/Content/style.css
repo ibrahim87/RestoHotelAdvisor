@@ -214,7 +214,7 @@ img {
 }
 .mu-main-navbar .navbar-header .navbar-brand-small {
   height: 20px;
-  margin-top: 16px;
+  margin-top: 10px;
   width: 105px;
 }
 
@@ -2645,4 +2645,27 @@ display: flex;
 #mu-latest-news .col-md-3{
   padding-bottom: 40px;
 }
+.mu-news-single.create-account{
+  position: relative;
+  left: 487px;
+  bottom: 47px;
+}
+.mu-subtitle.loggedIn-user {
+  position: relative;
+  top: 12px;
+  width: 287px;
+  left: -66px;
+  color: #FFF8DC;
+  font-family: "Open Sans", sans-serif;
+}
+#logoHotel{
+  position: relative;
+  left: -76px;
+}
 
+#Description p{
+  font-family: "Open Sans", sans-serif;
+}
+.caption p{
+  font-family: "Open Sans", sans-serif;
+}
